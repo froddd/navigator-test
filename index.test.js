@@ -22,7 +22,7 @@ describe("<NeedsOnline/>", () => {
       onLine: false
     };
     const { getByTestId } = render(<NeedsOnline />);
-    expect(getByTestId("needs-online").textContent).toMatch("Offline");
+    expect(getByTestId("needs-online").textContent).toBe("Offline");
   });
 
   it("renders a message if navigator is online", () => {
@@ -30,6 +30,6 @@ describe("<NeedsOnline/>", () => {
       onLine: true
     };
     const { getByTestId } = render(<NeedsOnline />);
-    expect(getByTestId("needs-online").textContent).toMatch("Online");
+    expect(getByTestId("needs-online").textContent).toBe("Online");
   });
 });
